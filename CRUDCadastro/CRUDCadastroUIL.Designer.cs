@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDCadastroUIL));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtFuncao = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -47,6 +47,7 @@
             this.btnSobre = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 284);
+            this.label6.Location = new System.Drawing.Point(12, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 5;
@@ -113,106 +114,111 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(71, 38);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(338, 20);
+            this.txtNome.Size = new System.Drawing.Size(415, 20);
             this.txtNome.TabIndex = 7;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(71, 64);
+            this.txtEndereco.MaxLength = 100;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(338, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(415, 20);
             this.txtEndereco.TabIndex = 8;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(71, 90);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 9;
             // 
             // txtFuncao
             // 
             this.txtFuncao.Location = new System.Drawing.Point(71, 116);
+            this.txtFuncao.MaxLength = 40;
             this.txtFuncao.Name = "txtFuncao";
             this.txtFuncao.Size = new System.Drawing.Size(122, 20);
             this.txtFuncao.TabIndex = 10;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(109, 281);
+            this.textBox6.Location = new System.Drawing.Point(109, 199);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(48, 20);
             this.textBox6.TabIndex = 11;
             // 
             // btnNovo
             // 
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
             this.btnNovo.Location = new System.Drawing.Point(15, 142);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.Size = new System.Drawing.Size(37, 28);
             this.btnNovo.TabIndex = 12;
-            this.btnNovo.Text = "button1";
             this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(96, 142);
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.Location = new System.Drawing.Point(58, 142);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(37, 28);
             this.btnSalvar.TabIndex = 13;
-            this.btnSalvar.Text = "button2";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(177, 142);
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.Location = new System.Drawing.Point(101, 142);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(37, 28);
             this.btnAlterar.TabIndex = 14;
-            this.btnAlterar.Text = "button3";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Location = new System.Drawing.Point(258, 142);
+            this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
+            this.btnDeletar.Location = new System.Drawing.Point(144, 142);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletar.Size = new System.Drawing.Size(37, 28);
             this.btnDeletar.TabIndex = 15;
-            this.btnDeletar.Text = "button4";
             this.btnDeletar.UseVisualStyleBackColor = true;
             // 
             // btnSobre
             // 
-            this.btnSobre.Location = new System.Drawing.Point(371, 274);
+            this.btnSobre.Image = ((System.Drawing.Image)(resources.GetObject("btnSobre.Image")));
+            this.btnSobre.Location = new System.Drawing.Point(406, 194);
             this.btnSobre.Name = "btnSobre";
-            this.btnSobre.Size = new System.Drawing.Size(75, 23);
+            this.btnSobre.Size = new System.Drawing.Size(37, 28);
             this.btnSobre.TabIndex = 16;
-            this.btnSobre.Text = "button5";
             this.btnSobre.UseVisualStyleBackColor = true;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(163, 279);
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.Location = new System.Drawing.Point(163, 194);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(37, 28);
             this.btnConsultar.TabIndex = 17;
-            this.btnConsultar.Text = "button6";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(452, 274);
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(449, 194);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.Size = new System.Drawing.Size(37, 28);
             this.btnSair.TabIndex = 18;
-            this.btnSair.Text = "button7";
             this.btnSair.UseVisualStyleBackColor = true;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(71, 90);
+            this.txtTelefone.Mask = "(00) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(86, 20);
+            this.txtTelefone.TabIndex = 19;
             // 
             // CRUDCadastroUIL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 306);
+            this.ClientSize = new System.Drawing.Size(517, 237);
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnSobre);
@@ -222,7 +228,6 @@
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.txtFuncao);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCodigo);
@@ -250,7 +255,6 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtFuncao;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnNovo;
@@ -260,6 +264,7 @@
         private System.Windows.Forms.Button btnSobre;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }
 
