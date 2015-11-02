@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CRUDCadastro
 {
-    public partial class Form1 : Form
+    public partial class CRUDCadastroSOB : Form
     {
-        public Form1()
+        public CRUDCadastroSOB()
         {
             InitializeComponent();
         }
