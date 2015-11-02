@@ -39,7 +39,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtFuncao = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -48,6 +48,7 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -135,12 +136,12 @@
             this.txtFuncao.Size = new System.Drawing.Size(122, 20);
             this.txtFuncao.TabIndex = 10;
             // 
-            // textBox6
+            // txtBusca
             // 
-            this.textBox6.Location = new System.Drawing.Point(109, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(48, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtBusca.Location = new System.Drawing.Point(109, 199);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(48, 20);
+            this.txtBusca.TabIndex = 11;
             // 
             // btnNovo
             // 
@@ -150,6 +151,7 @@
             this.btnNovo.Size = new System.Drawing.Size(37, 28);
             this.btnNovo.TabIndex = 12;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
@@ -186,6 +188,7 @@
             this.btnSobre.Size = new System.Drawing.Size(37, 28);
             this.btnSobre.TabIndex = 16;
             this.btnSobre.UseVisualStyleBackColor = true;
+            this.btnSobre.Click += new System.EventHandler(this.btnSobre_Click);
             // 
             // btnConsultar
             // 
@@ -195,6 +198,7 @@
             this.btnConsultar.Size = new System.Drawing.Size(37, 28);
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnSair
             // 
@@ -204,6 +208,7 @@
             this.btnSair.Size = new System.Drawing.Size(37, 28);
             this.btnSair.TabIndex = 18;
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // txtTelefone
             // 
@@ -213,11 +218,22 @@
             this.txtTelefone.Size = new System.Drawing.Size(86, 20);
             this.txtTelefone.TabIndex = 19;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(187, 142);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(37, 28);
+            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // CRUDCadastroUIL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 237);
+            this.ClientSize = new System.Drawing.Size(503, 237);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnConsultar);
@@ -226,7 +242,7 @@
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.txtFuncao);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtNome);
@@ -239,6 +255,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CRUDCadastroUIL";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.CRUDCadastroUIL_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +273,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtFuncao;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAlterar;
@@ -265,6 +282,7 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
 

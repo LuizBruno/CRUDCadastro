@@ -64,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRUDCadastroSOB.resx">
+      <DependentUpon>CRUDCadastroSOB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUDCadastroUIL.resx">
       <DependentUpon>CRUDCadastroUIL.cs</DependentUpon>
     </EmbeddedResource>

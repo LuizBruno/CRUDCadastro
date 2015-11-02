@@ -26,52 +26,89 @@ namespace CRUDCadastro
 
         public static void alteraUmFuncionario()
         {
-            String aux = "";
-
             conecta();
-            strSQL = new SqlCommand(aux, conn);
-            strSQL.ExecuteNonQuery();
-            desconecta();
+            strSQL = new SqlCommand("stpAlterarFuncionario", conn);
+            strSQL.Parameters.AddWithValue("@codigo", CRUDCadastro.getCodigo());
+            strSQL.Parameters.AddWithValue("@nome", CRUDCadastro.getNome());
+            strSQL.Parameters.AddWithValue("@telefone", CRUDCadastro.getTelefone());
+            strSQL.Parameters.AddWithValue("@endereco", CRUDCadastro.getEndereco());
+            strSQL.Parameters.AddWithValue("@funcao", CRUDCadastro.getFuncao());
+            strSQL.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
+                strSQL.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Erro.setMsg("Erro: " + e.ToString());
+            }
+            finally
+            {
+                desconecta();
+            }
         }
 
         public static void deletaUmFuncionario()
         {
-            String aux = "";
-
             conecta();
-            strSQL = new SqlCommand(aux, conn);
-            strSQL.ExecuteNonQuery();
-            desconecta();
+            strSQL = new SqlCommand("stpDeletarFuncionario", conn);
+            strSQL.Parameters.AddWithValue("@codigo", CRUDCadastro.getCodigo());
+            strSQL.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
+                strSQL.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Erro.setMsg("Erro: " + e.ToString());
+            }
+            finally
+            {
+                desconecta();
+            }
         }
 
         public static void inserirUmFuncionario()
         {
-            String aux = "";
-
             conecta();
-            strSQL = new SqlCommand(aux, conn);
-            strSQL.ExecuteNonQuery();
-            desconecta();
+            strSQL = new SqlCommand("stpInserirFuncionario", conn);
+            strSQL.Parameters.AddWithValue("@nome", CRUDCadastro.getNome());
+            strSQL.Parameters.AddWithValue("@telefone", CRUDCadastro.getTelefone());
+            strSQL.Parameters.AddWithValue("@endereco", CRUDCadastro.getEndereco());
+            strSQL.Parameters.AddWithValue("@funcao", CRUDCadastro.getFuncao());
+            strSQL.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
+                strSQL.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Erro.setMsg("Erro: " + e.ToString());
+            }
+            finally
+            {
+                desconecta();
+            }
         }
 
         public static void consultaUmFuncionario()
         {
-            String aux = "";
-
             conecta();
-            strSQL = new SqlCommand(aux, conn);
-            result = strSQL.ExecuteReader();
-            Erro.setErro(false);
-            if (result.Read())
+            strSQL = new SqlCommand("stpConsultarFuncionario", conn);
+            strSQL.Parameters.AddWithValue("@codigo", CRUDCadastro.getCodigo());
+            strSQL.CommandType = System.Data.CommandType.StoredProcedure;
+            try
             {
-                //Livro.setTitulo(result.GetString(1));
-                //Livro.setAutor(result.GetString(2));
-                //Livro.setEditora(result.GetString(3));
-                //Livro.setAno(result.GetString(4));
+                strSQL.ExecuteNonQuery();
             }
-            else
-                Erro.setMsg("Livro não cadastrado.");
-            desconecta();
+            catch (Exception e)
+            {
+                Erro.setMsg("Erro: " + e.ToString());
+            }
+            finally
+            {
+                desconecta();
+            }
         }
     }
 }
